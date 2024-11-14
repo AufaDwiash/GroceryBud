@@ -1,0 +1,328 @@
+/* Reset dan Styling Umum */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* Styling untuk teks "grocery bud" */
+h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Dark Mode - Ganti warna teks "grocery bud" menjadi putih */
+body.dark-mode h3 {
+  color: #fff;
+}
+
+/* Styling untuk section-center */
+.section-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Form Styling */
+.grocery-form {
+  margin-bottom: 20px;
+}
+
+.grocery-form .form-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grocery-form input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 250px;
+}
+
+.grocery-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.grocery-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #333;
+  color: #fff; /* Semua teks menjadi putih di dark mode */
+}
+
+body.dark-mode h3 {
+  color: #fff; /* Teks h3 menjadi putih di dark mode */
+}
+
+body.dark-mode .grocery-form input {
+  background-color: #555;
+  color: #fff;
+  border-color: #777;
+}
+
+body.dark-mode .grocery-form button {
+  background-color: #28a745;
+}
+
+body.dark-mode .grocery-form button:hover {
+  background-color: #218838;
+}
+
+/* Grocery List */
+.grocery-container {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.grocery-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling untuk tiap item dalam list */
+.grocery-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.grocery-item:hover {
+  background-color: #f1f1f1; /* Highlight saat hover */
+  transform: translateY(-5px); /* Memberikan efek mengambang */
+}
+
+/* Untuk item yang sudah selesai (ditandai dengan checkbox) */
+.grocery-item.completed {
+  background-color: #d4edda;
+  border-left: 5px solid #28a745;
+}
+
+.grocery-item.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.grocery-item .date {
+  font-style: italic;
+  color: #666;
+}
+
+/* Edit Button */
+.edit-btn {
+  color: #007bff;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease-in-out, color 0.3s;
+  margin-right: 10px;
+}
+
+.edit-btn:hover {
+  color: #28a745;
+  transform: scale(1.1);
+}
+
+/* Delete Button */
+.delete-btn {
+  color: #dc3545;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease-in-out, color 0.3s;
+}
+
+.delete-btn:hover {
+  color: #ff6347;
+  transform: scale(1.1);
+}
+
+/* Tombol Clear dan Check All */
+.clear-btn, .check-all-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.clear-btn {
+  background-color: #ff6347;
+  color: white;
+  margin-top: 20px;
+}
+
+.clear-btn:hover {
+  background-color: #e03e2f;
+}
+
+.check-all-btn {
+  background-color: #28a745;
+  color: white;
+  margin-left: 10px;
+}
+
+.check-all-btn:hover {
+  background-color: #218838;
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode .grocery-item {
+  background-color: #444;
+  color: #fff; /* Semua teks item menjadi putih di dark mode */
+}
+
+body.dark-mode .grocery-item.completed {
+  background-color: #4f5b62;
+  border-left: 5px solid #8fc7c5;
+}
+
+body.dark-mode .grocery-item:hover {
+  background-color: #555;
+}
+
+body.dark-mode .edit-btn,
+body.dark-mode .delete-btn {
+  color: #fff; /* Ikon Edit dan Delete menjadi putih di dark mode */
+}
+
+/* Dark Mode untuk tombol */
+body.dark-mode .clear-btn,
+body.dark-mode .check-all-btn {
+  background-color: #218838;
+}
+
+body.dark-mode .clear-btn:hover,
+body.dark-mode .check-all-btn:hover {
+  background-color: #1e7e34;
+}
+
+/* Menata tata letak tombol Clear All dan Check All */
+.grocery-container .clear-btn,
+.grocery-container .check-all-btn {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.grocery-container .clear-btn,
+.grocery-container .check-all-btn {
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grocery-container .clear-btn,
+  .grocery-container .check-all-btn {
+    width: 100%; /* Membuat tombol menjadi lebar penuh di layar kecil */
+    margin: 10px 0;
+  }
+
+  .grocery-item {
+    flex-direction: column; /* Menumpuk item secara vertikal di perangkat kecil */
+    align-items: flex-start;
+  }
+
+  .grocery-item .date {
+    margin-top: 5px;
+  }
+}
+
+/* Gaya untuk toggle dark mode */
+.dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, color 0.3s;
+}
+
+.dark-mode-toggle i {
+  color: #333; /* Warna ikon default */
+}
+
+.dark-mode-toggle:hover i {
+  transform: scale(1.2);
+  color: #007bff;
+}
+
+/* Dark Mode untuk ikon bulan (moon) */
+body.dark-mode .dark-mode-toggle i {
+  color: #fff; /* Ikon bulan menjadi putih di dark mode */
+}
+
+/* Styling untuk tombol Edit dan Delete */
+.grocery-item button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0;
+  transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Styling untuk Edit Button */
+.edit-btn {
+  color: #007bff;
+  margin-right: 10px; /* Memberi jarak antara ikon Edit dan Delete */
+  transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+.edit-btn:hover {
+  color: #28a745; /* Warna berubah menjadi hijau saat hover */
+  transform: scale(1.2); /* Membesar sedikit saat hover */
+}
+
+/* Styling untuk Delete Button */
+.delete-btn {
+  color: #dc3545;
+  transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+.delete-btn:hover {
+  color: #ff6347; /* Warna berubah menjadi oranye kemerahan saat hover */
+  transform: scale(1.2); /* Membesar sedikit saat hover */
+}
+
+/* Responsif untuk Ikon */
+@media (max-width: 768px) {
+  .grocery-item button {
+    font-size: 1.2rem; /* Ukuran ikon lebih kecil pada layar lebih kecil */
+  }
+}

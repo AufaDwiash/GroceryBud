@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery Bud</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Main Section -->
+    <section class="section-center">
+      <!-- form -->
+      <form class="grocery-form">
+        <p class="alert"></p>
+        <h3>grocery bud</h3>
+        <!-- Menampilkan tanggal saat ini -->
+        <p id="current-date"></p>
+        <div class="form-control">
+          <input type="text" id="grocery" placeholder="Masukkan Tugas Mu" />
+          <!-- Tambahkan input tanggal -->
+          <input type="date" id="grocery-date" />
+          <button type="submit" class="submit-btn">submit</button>
+        </div>
+      </form>
+     <!-- list -->
+<div class="grocery-container">
+  <div class="grocery-list"></div>
+  <button class="clear-btn">Hapus Semua Tugas</button>
+  <button class="check-all-btn">Selesaikan Semua Tugas</button> <!-- Tombol Centang Semua Tugas -->
+</div>
+    </section>
+    
+
+    <!-- Link JavaScript -->
+    <script src="app.js"></script>
+  </body>
+</html>
